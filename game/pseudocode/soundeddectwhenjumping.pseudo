@@ -1,0 +1,16 @@
+class player
+
+    ...
+
+    public procedure jump(..., jumpSound)
+
+        if grounded and jumpKeyPressed then
+            ...
+            pygame.mixer.playSound(jumpSound)
+        endif
+
+    endprocedure
+
+    ...
+
+endclass

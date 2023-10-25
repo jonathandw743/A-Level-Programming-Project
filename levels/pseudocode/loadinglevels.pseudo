@@ -1,0 +1,49 @@
+function load_levels(levelsFilePath)
+
+    levelsFile = open(levelsFilePath)
+    levelDicts = parseJSON(levelsFile.read())
+
+    levels = []
+    for levelDict in levelDicts
+
+        startPos = new Vector(level_dict["start_pos"]["x"], level_dict["start_pos"]["y"])
+        
+        target = new Rectangle(
+            levelDict["target"]["x"],
+            levelDict["target"]["y"],
+            levelDict["target"]["hw"],
+            levelDict["target"]["hh"],
+        )
+
+        bounds = new Rectangle(
+            levelDict["bounds"]["x"],
+            levelDict["bounds"]["y"],
+            levelDict["bounds"]["hw"],
+            levelDict["bounds"]["hh"],
+        )
+
+        platforms = []
+        for platformDict in levelDict["platforms"]:
+            platform = new Platform(
+                platformDict["x"],
+                platformDict["y"],
+                platformDict["hw"],
+                platformDict["hh"],
+            )
+            platforms.push(platform)
+        next platformDict
+
+        level = new Level(
+            platformDict["level_id"],
+            startPos,
+            target,
+            bounds,
+            platforms,
+        )
+        levels.push(level)
+
+    next levelDict
+
+    return levels
+
+endfunction

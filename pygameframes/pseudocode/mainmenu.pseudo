@@ -1,0 +1,9 @@
+logoImage = loadImage("tekkerzlogo.png")
+pygame.drawImage(logoImage)
+
+levelSelectScreenButton = new Button("Go to Level Select Screen")
+levelSelectScreenButton.setOnClick(runLevelSelectScreen)
+
+// this is just a placeholder for other buttons that may be on this screen
+optionsScreenButton = new Button("Go to Options Screen")
+optionsScreenButton.setOnClick(runOptionsScreen)

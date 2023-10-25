@@ -1,0 +1,10 @@
+procedure levelComplete()
+
+    ...
+
+    specialOfferImage = pygame.loadImage("specialoffer.jpg")
+    pygame.displayImage(specialOfferImage)
+
+    ...
+
+endprocedure

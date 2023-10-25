@@ -1,0 +1,18 @@
+class Player
+    
+    ...
+
+    public procedure jumpDoubleJump()
+        if jumpKeyIsPressed() then
+            if isTouchingGround() then
+                accelerateUpwards(10)
+            else hasDoubleJump() then
+                accelerateUpwards(10)
+                setCannotDoubleJump()
+            endif
+        endif
+    endprocedure
+
+    ...
+
+endclass

@@ -1,0 +1,6 @@
+function loadUsersFromSecondaryStorage()
+    file = open("users.txt")
+    data = file.read()
+    users = deserialiseObject(data)
+    return users
+endfunction

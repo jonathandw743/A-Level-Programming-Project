@@ -1,0 +1,13 @@
+class Text
+
+    public procedure new(text, rectangle)
+        text = text
+        rectangle = rectangle
+        textSize = getSizeOfTextToFillRectangle(text, rectangle)
+    endprocedure
+
+    public procedure draw()
+        pygame.drawText(text, rectangle.x, rectangle.y, textSize)
+    endprocedure
+
+endclass

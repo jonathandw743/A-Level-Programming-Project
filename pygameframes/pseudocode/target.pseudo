@@ -1,0 +1,11 @@
+procedure gameLoop()
+
+    ...
+
+    if player.rectangleCollisionDetection(target) then
+        triggerWinState()
+    endif
+
+    ...
+
+endprocedure

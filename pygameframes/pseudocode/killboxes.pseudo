@@ -1,0 +1,13 @@
+procedure gameLoop()
+
+    ...
+
+    for killBox in killBoxes
+        if player.rectangleCollisionDetection(killBox) then
+            triggerFailState()
+        endif
+    next
+
+    ...
+
+endprocedure

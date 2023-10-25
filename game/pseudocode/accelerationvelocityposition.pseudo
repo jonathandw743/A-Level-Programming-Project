@@ -1,0 +1,12 @@
+class Player
+    
+    ...
+
+    public procedure updatePhysics(deltaTime)
+        position += velocity * deltaTime + 0.5 * accleration * deltaTime * deltaTime
+        velocity += accleration * deltaTime
+    endprocedure
+
+    ...
+
+endclass

@@ -1,0 +1,23 @@
+class Platform
+
+    public procedure new(x, y, hw, hh)
+        rect = new Rectangle(x, y, hw, hh)
+    endprocedure
+
+    public function left()
+        return x - hw
+    endfunction
+
+    public function top()
+        return y - hh
+    endfunction
+
+    public function right()
+        return x + hw
+    endfunction
+
+    public function bottom()
+        return y + hh
+    endfunction
+
+endprocedure

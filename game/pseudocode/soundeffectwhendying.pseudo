@@ -1,0 +1,10 @@
+procedure gameOver()
+
+    ...
+
+    levelFailSound = pygame.loadSound("levelfail.wav")
+    pygame.mixer.playSound(levelFailSound)
+
+    ...
+
+endprocedure

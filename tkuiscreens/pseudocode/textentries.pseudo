@@ -1,0 +1,17 @@
+class TextInputGUIElement
+
+    public procedure new()
+        content = ""
+        entry = new tkinter.Entry()
+        entry.setOnChange(setContents)
+    endprocedure
+
+    private procedure setContents(newContents)
+        contents = newContents
+    endprocedure
+
+    public function getContents()
+        return content
+    endprocedure
+
+endclass

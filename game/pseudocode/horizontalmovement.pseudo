@@ -1,0 +1,18 @@
+class Player
+    
+    ...
+
+    public procedure horizontalMovement()
+        xMovement = 0
+        if leftIsPressed() then
+            xMovement -= 1
+        endif
+        if rightIsPressed() then
+            xMovement += 1
+        endif
+        applyHorizontalAcceleration(xMovement * speed)
+    endprocedure
+
+    ...
+
+endclass

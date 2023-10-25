@@ -1,0 +1,23 @@
+class Player
+
+    ...
+
+    public function isCollidingWithRect(otherRect)
+        if rect.x - rect.size.x >= otherRect.x + otherRect.size.x then
+            return false
+        endif
+        if rect.y - rect.size.y >= otherRect.y + otherRect.size.y then
+            return false
+        endif
+        if rect.x + rect.size.x <= otherRect.x - otherRect.size.x then
+            return false
+        endif
+        if rect.y + rect.size.y <= otherRect.y + otherRect.size.y then
+            return false
+        endif
+        return true
+    endfunction
+    
+    ...
+
+endclass

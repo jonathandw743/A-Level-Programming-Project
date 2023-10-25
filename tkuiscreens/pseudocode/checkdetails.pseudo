@@ -1,0 +1,32 @@
+usernameInput = new TextInputGUIElement()
+passwordInput = new TextInputGUIElement()
+
+submitButton = new ButtonGUIElement()
+
+function getUserWithUsername(username)
+    users = loadUsersFromSecondaryStorage()
+
+    for i = 0 to users.length() - 1
+        if users[i].getUsername() == username then
+            return users[i]
+        endif
+    next i
+
+    return false
+endfunction
+
+procedure submitButtonOnClick()
+    username = usernameInput.getContents()
+    password = passwordInput.getContents()
+
+    user = getUserWithUsername(username)
+
+    if user != false then
+        if user.username == password then
+            closeCurrentUIScreen()
+            startGame(user)
+        endif
+    endif
+endfunction
+
+submitButton.setOnClick(submitButtonOnClick)

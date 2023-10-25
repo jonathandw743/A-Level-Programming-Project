@@ -1,0 +1,9 @@
+procedure saveUserToSecondaryStorage(user)
+    file = open("users.txt")
+    serialisedUserArray = file.read()
+    userArray = deserialiseObject(serialisedUserArray)
+    userArray.push(user)
+    serialisedUserArray = serialiseObject(userArray)
+    file.write(serialisedUserArray)
+    file.close()
+endprocedure

@@ -1,0 +1,17 @@
+procedure runLevelSelectScreen()
+    levels = deserialiseObject(loadLevels("levels.txt"))
+
+    levelButtons = []
+
+    for i = 0 to levels.length() - 1
+        newLevelButton = Button("Level " + i.toString())
+
+        procedure runCurrentLevel()
+            runLevel(levels[i])
+        endprocedure
+
+        newLevelButton.setOnClick(runCurrentLevel)
+        levelButtons.push(newLevelButton)
+    next i
+    
+endprocedure

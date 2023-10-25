@@ -1,0 +1,33 @@
+class Player
+
+    ...
+
+    public procedure rectangleCollisionResponse(otherRect)
+    
+        bigRect = new Rectangle(
+            (otherRect.x, otherRect.y),
+            (otherRect.size.x + rect.size.x, otherRect.size.y + rect.size.y)
+        )
+        point = new Vector(rect.x, rect.y)
+        
+        distToTop = point.y - bigRect.top()
+        distToRight = bigRect.right() - point.x
+        distToLeft = point.x - bigRect.left()
+        distToBottom = bigRect.bottom() - point.y
+        
+        minDist = min(distToBottom, distToLeft, distToRight, distToTop)
+        if minDist == distToBottom then
+            rect.y = bigRect.bottom()
+        else if minDist == distToLeft then
+            rect.x = bigRect.left()
+        else if minDist == distToRight then
+            rect.x = bigRect.right()
+        else if minDist == distToTop then
+            rect.y = bigRect.top()
+        endif
+
+    procedure
+    
+    ...
+
+endclass

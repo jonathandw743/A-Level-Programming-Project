@@ -1,0 +1,29 @@
+class Button
+
+    public procedure new(text)
+        rectangle = getAvailableRectangle()
+        text = new Text(text, rectangle)
+
+        procedure onClickProcedure()
+
+        endprocedure
+
+        onClick = onClickProcedure
+    endprocedure
+
+    public procedure click(mousePos)
+        if pointInRectangle(rectangle, mousePos) then
+            onClick()
+        endif
+    endprocedure
+
+    public procedure draw()
+        pygame.drawRectangle(rectangle)
+        text.draw()
+    endprocedure
+
+    public procedure setOnClick(onClickProcedure)
+        onClick = onClickProcedure
+    endprocedure
+
+endclass

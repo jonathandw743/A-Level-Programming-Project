@@ -1,0 +1,10 @@
+//! not needed
+procedure store_level(level)
+    file = open("levels.json")
+    level_dictionary = objectToDictionary(level)
+    level_dictionary["platforms"] = []
+    for i = 0 to levels.length()
+    file = open("levels.json")
+    json.dump(f, level_dictionary)
+    file.close()
+endprocedure
