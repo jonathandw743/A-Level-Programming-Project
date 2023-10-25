@@ -2,6 +2,8 @@
 
 This is a platforming game programmed in python using [pygame](https://www.pygame.org).
 
+Read the coursework document [here]("Full programming project - with corrections.pdf")
+
 To install dependencies: `pip install -r requirements.txt`
 
 To run: `python main.py`
