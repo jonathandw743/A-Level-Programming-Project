@@ -2,7 +2,7 @@
 
 This is a platforming game programmed in python using [pygame](https://www.pygame.org).
 
-Read the coursework document [here](Full programming project - withcorrections.pdf)
+Read the coursework document [here](Full%20programming%20project%20-%20with%20corrections.pdf)
 
 To install dependencies: `pip install -r requirements.txt`
 
